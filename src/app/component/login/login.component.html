@@ -1,0 +1,102 @@
+<body class="vh-100">
+  <div class="authincation h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100 align-items-center">
+        <div class="col-md-6">
+          <div class="authincation-content">
+            <div class="row no-gutters">
+              <div class="col-xl-12">
+                <div class="auth-form">
+                  <div class="text-center mb-3">
+                    <a href="index.html"
+                      ><img src="assets/images/logo-full.png" alt=""
+                    /></a>
+                  </div>
+                  <h4 class="text-center mb-4">Sign up your account</h4>
+                  <form [formGroup]="form" class="login">
+                    <!-- Password input -->
+
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input
+                        type="text"
+                        formControlName="username"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input
+                        type="password"
+                        formControlName="password"
+                        class="form-control"
+                      />
+                    </div>
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                      <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="form2Example31"
+                            checked
+                          />
+                          <label class="form-check-label" for="form2Example31">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                      </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block mb-4"
+                      (click)=" signin()"
+                       
+                    >
+                      Sign in
+                    </button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                      <a routerLink="/user">CREATE AN ACCOUNT</a>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-google"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link btn-floating mx-1"
+                    >
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

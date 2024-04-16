@@ -1,0 +1,77 @@
+<div class="dlabnav">
+  <div class="dlabnav-scroll">
+    <ul class="metismenu" id="menu">
+      <li>
+        <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
+          <i class="bi bi-grid"></i>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <ul aria-expanded="false">
+          <li><a href="index.html">Dashboard Light</a></li>
+          <li><a href="index-2.html">Dashboard Dark</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
+          <i class="bi bi-book"></i>
+          <span class="nav-text">Courses</span>
+        </a>
+        <ul aria-expanded="false">
+          <li><a routerLink="/home/liste-cours">Cours détaillées</a></li>
+          
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
+          <i class="bi bi-people"></i>
+          <span class="nav-text">Instructor</span>
+        </a>
+        <ul aria-expanded="false">
+          <li><a routerLink="/home/schedule">Schedule</a></li>
+          <li><a routerLink="/home/listetudiant">List Etudiants</a></li>
+          <li><a routerLink="/home/listformateur">List Formateurs</a></li>
+
+          <li><a href="instructor-transactions.html">Transactions</a></li>
+          <li><a href="instructor-liveclass.html">Live class</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
+          <i class="bi bi-info-circle"></i>
+          <span class="nav-text">App</span>
+        </a>
+        <ul aria-expanded="false">
+          
+          <li >
+            <a routerLink="/home/profile">
+              <i class="fas fa-user"></i>Profile Admin
+            </a>
+          </li>
+          <li >
+            <a routerLink="/home/profileetudiant">
+              <i class="fas fa-user"></i>Profile Etudiant
+            </a>
+          </li>
+          <li >
+            <a routerLink="/home/profileformateur">
+              <i class="fas fa-user"></i>Profile Formateur
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
+          <i class="bi bi-file-earmark-break"></i>
+          <span class="nav-text">Pages</span>
+        </a>
+        <ul aria-expanded="false">
+          <li>
+            <a routerLink="/signin"><i class="fa fa-sign-in"></i>Login</a>
+          </li>
+          <li><a routerLink="/user">Register</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<p>Role: {{ role }}</p>

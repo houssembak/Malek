@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="cours-section">
+        <!-- Votre formulaire de dépôt de cours -->
+    </div>
+    
+    <div class="cours-liste">
+        <div *ngFor="let niveau of niveauscolire">
+            <div *ngFor="let matiere of matieres">
+                <h3>Cours déposés pour {{ niveau.name }} - {{ matiere.name }}</h3>
+                <ul>
+                    <li *ngFor="let fichier of coursDeposes[niveau.value]?.[matiere.value]; let i = index;">
+                        <a href="javascript:void(0);" (click)="openFile(fichier)">{{ fichier }}</a>
+                        <button (click)="deleteCours(niveau.value, matiere.value, i)">Supprimer Cours</button>
+                    </li>
+                </ul>
+                <div *ngIf="addingCours">
+                    <button (click)="createCour(niveau.value, matiere.value)">Ajouter Cours</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

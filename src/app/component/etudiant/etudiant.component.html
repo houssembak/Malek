@@ -1,0 +1,135 @@
+<body class="vh-100">
+  <div class="authincation h-100">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100 align-items-center">
+        <div class="col-md-6">
+          <div class="authincation-content">
+            <div class="row no-gutters">
+              <div class="col-xl-12">
+                <div class="auth-form">
+                  <div class="text-center mb-3">
+                    <a href="index.html"
+                      ><img src="assets/images/logo-full.png" alt=""
+                    /></a>
+                  </div>
+                  <h4 class="text-center mb-4">
+                    Sign up your account etudiant
+                  </h4>
+                  <form [formGroup]="form">
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Name</strong></label>
+                      <input
+                        type="name"
+                        class="form-control"
+                        placeholder="name"
+                        formControlName="name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Username</strong></label>
+                      <input
+                        type="username"
+                        class="form-control"
+                        placeholder="username"
+                        formControlName="username"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Email</strong></label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="hello@example.com"
+                        formControlName="email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Password</strong></label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        value="Password"
+                        formControlName="password"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Telephone</strong></label>
+                      <input
+                        type="telephone"
+                        class="form-control"
+                        value="Telephone"
+                        formControlName="telephone"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Adresse</strong></label>
+                      <input
+                        type="adresse"
+                        class="form-control"
+                        value="Adresse"
+                        formControlName="adresse"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1"><strong>Matieres</strong></label>
+                      <div *ngFor="let matiere of matieres" class="form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          [value]="matiere.value"
+                          (change)="toggleOption(matiere.value)"
+                        />
+                        <label class="form-check-label">{{
+                          matiere.name
+                        }}</label>
+                      </div>
+                    </div>
+
+                    <p>
+                      <strong>Selected Matieres:</strong>
+                      {{ selectedOptions.join(", ") }}
+                    </p>
+
+                    <div class="form-group">
+                      <label class="mb-1"
+                        ><strong>Niveau scolire</strong></label
+                      >
+                      <select
+                        class="form-control"
+                        formControlName="niveauscolire"
+                      >
+                        <option value="5éme Année">5éme Année</option>
+                        <option value="6éme Année">6éme Année</option>
+                        <option value="7éme Année">7éme Année</option>
+                        <option value="8éme Année">8éme Année</option>
+                        <option value="9éme Année">9éme Année</option>
+
+                        <!-- Ajoutez autant d'options que nécessaire -->
+                      </select>
+                    </div>
+
+                    <div class="text-center mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-block"
+                        (click)="onSubmit()"
+                      >
+                        Sign me up
+                      </button>
+                    </div>
+                  </form>
+                  <div class="new-account mt-3">
+                    <p>
+                      Already have an account?
+                      <a class="text-primary" routerLink="/">Sign in</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,35 @@
+<h2>Liste des horaires</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matière</th>
+      <th>Niveau Scolaire</th>
+      <th>Jours de la semaine</th>
+      <th>Heure de début</th>
+      <th>Heure de fin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let schedule of schedules">
+      <td>
+        <ul>
+          <li *ngFor="let matiere of schedule.matiere">{{ matiere }}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let niveau of schedule.niveauscolaire">{{ niveau }}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let day of schedule.daysOfWeek">{{ day }}</li>
+        </ul>
+      </td>
+      <td>{{ getScheduleTime(schedule.daysOfWeek[0], schedule.matiere[0]) }}</td>
+      <td>{{ getScheduleTime(schedule.daysOfWeek[0], schedule.matiere[0]) }}</td>
+    </tr>
+  </tbody>
+</table>
+
